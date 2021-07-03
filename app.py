@@ -15,7 +15,10 @@ def predict():
         message = request.form['message']
         data = message
         ableist_language = decoder.find_ableist_language(data)
-    return render_template('result.html',prediction = ableist_language)
+        length = len(ableist_language)
+
+
+    return render_template('result.html',prediction = ableist_language, length=length)
 
 if __name__ == '__main__':
 	app.run(debug=True)
