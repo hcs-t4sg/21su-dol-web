@@ -1,0 +1,22 @@
+.navbar-default {
+    background-color: none;
+    border-color: rgba(220, 222, 224, 1) !important;
+    border-bottom: 1px solid;
+}
+
+.navbar-nav li a {
+    color: rgba(23, 23, 23, 1);
+}
+
+.header-bar {
+    position: relative;
+    color: rgba(23, 23, 23, 1);
+    border-color: rgba(220, 222, 224, 1) !important;
+    border-bottom: 1px solid;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.header-bar p {
+    color: rgba(169, 174, 177, 1);
+}

@@ -6,16 +6,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="/static/stylesheets/unsemantic-grid-responsive.css" />
     <link type="text/css" rel="stylesheet" href="/static/stylesheets/main.css" />
+    <link type="text/css" rel="stylesheet" href="/static/header.css" />
+    <link type="text/css" rel="stylesheet" href="/static/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   </head>
   <body>
+    <nav class="navbar navbar-expand-md navbar-default">
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">Check Job Description</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
 
-  <div class="header grid-container">
-    <div class="grid-70 mobile-grid-100">
-      <h1><a href="/">Job Decoder tester</a></h1>
+    <div class="header-bar">
+        <h1>Ableist Language Detector for Job Descriptions</h1>
+        <p>Powered by the Department of Labor Office of Disability Employment Policy and xD.gov </p>
     </div>
-  </div>
 </div>
 
     {% block maincontent %}
