@@ -36,6 +36,7 @@ header{
 header h2{
 	text-align:center;
 	color:#fff;
+	margin-bottom:30px;
 
 }
 
@@ -52,3 +53,4 @@ header h2{
     width: 200px;
     height: 150px;
 }
+

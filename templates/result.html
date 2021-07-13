@@ -2,19 +2,13 @@
 
     {% block maincontent %}
 
-	<div class="ml-container">
+	<div class="container">
 
-	<h2><b>Result</b></h2>
-    <p>{{prediction}}</p>
+		<h2>We found <b>{{length}}</b> instances of ableist language</h2>
 
-	<h2><b>Number of ableist word</b></h2>
-    <p>{{length}}</p>
-
-	<h2>Detailed analysis</h2>
-	<p> {{result | safe}}</p>
-
-	<h3>List of words:</h3>
-	<p>{{ls}}</p>
+		<div class ="outputbox">
+			<p> {{result | safe}}</p>
+		</div>
 
 	</div>
 
