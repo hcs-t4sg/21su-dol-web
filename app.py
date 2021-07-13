@@ -27,26 +27,11 @@ def predict():
 
         ls = [word.text for word in ableist_language]
 
-        newlist = [word for line in ls for word in line.split()]
-
-        ## highlighting words python function
-        ## def analyze():
-            ## print(reduce(lambda t, x: t.replace(*x), chain([data.lower()], ((t, colored(t,'white','on_red')) for t in ls))))
-        
-        boldened = " ".join(["<mark>{}</mark>".format(word) if word in newlist else word for word in data.split()])
-
-        
-        def highlight(paragraph):
-            for word in ls:
-                if word in paragraph:
-                    paragraph.replace(word, '<b>{}</b>'.format(word))
-                else:
-                    return paragraph
-        
-        s2=highlight(data)
+        for word in ls:
+            data = data.replace(word, '<mark>%s</mark>' % word)
 
     
-    return render_template('result.html',prediction = ableist_language, length=length, ls=ls, newlist=newlist, data=data, result=boldened, s2=s2)
+    return render_template('result.html',prediction = ableist_language, length=length, ls=ls, data=data, result=data)
 
 if __name__ == '__main__':
 	app.run(debug=True)
