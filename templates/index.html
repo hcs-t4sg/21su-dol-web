@@ -1,18 +1,26 @@
 {% extends "layout.html" %}
 
     {% block maincontent %}
+	<div class="container">
+		<div class="textbox">
+			<h4>How to use this tool</h4>
+			<p>
+				Ableist language is language that is offensive to people with disability. 
+				This type of language in job descriptions can cause people with disabilities to feel excluded from jobs that they are qualified for. 
+				This tool checks job descriptions for ableist language and suggests alternative phrasing that supports more fair and inclusive hiring.
+			</p>
+		</div>
+		<div class="inputbox">
+			<form action="{{ url_for('predict')}}" method="POST">
+				<textarea class="text-input" name="message" placeholder="Enter Job Description"></textarea>
+				<input type="submit" class="input-bttn" value="Check Job Description">
+			</form>
+		</div>
 
-	<div class="ml-container">
-
-		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Job Post Here</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="4" cols="50"></textarea>
-		<br/>
-
-		<input type="submit" class="btn-info" value="predict">
 		
-	</form>
+	</div>
+
+	<br />
 
 	<h2>Example Jobpost</h2>
 	<p>requirements
