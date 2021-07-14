@@ -1,41 +1,108 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sample Encoder</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/static/stylesheets/unsemantic-grid-responsive.css" />
-    <link type="text/css" rel="stylesheet" href="/static/stylesheets/main.css" />
-    <link type="text/css" rel="stylesheet" href="/static/header.css" />
-    <link type="text/css" rel="stylesheet" href="/static/main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8" />
+
+    <title>Ableist Language Detector for Job Descriptions</title>
+    <script src="/static/uswds-2.12.0/js/uswds-init.min.js"></script>
+    <link rel="stylesheet" href="/static/uswds-2.12.0/css/uswds.min.css" />
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-default">
-      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/">Check Job Description</a>
-            </li>
-        </ul>
+    <section class="usa-banner" aria-label="Official government website">
+      <div class="usa-accordion">
+        <header class="usa-banner__header">
+          <div class="usa-banner__inner">
+            <div class="grid-col-auto">
+              <img
+                class="usa-banner__header-flag"
+                src="/static/uswds-2.12.0/img/us_flag_small.png"
+                alt="U.S. flag"
+              />
+            </div>
+            <div class="grid-col-fill tablet:grid-col-auto">
+              <p class="usa-banner__header-text">
+                An official website of the United States government
+              </p>
+              <p class="usa-banner__header-action" aria-hidden="true">
+                Here’s how you know
+              </p>
+            </div>
+            <button
+              class="usa-accordion__button usa-banner__button"
+              aria-expanded="false"
+              aria-controls="gov-banner-default"
+            >
+              <span class="usa-banner__button-text">Here’s how you know</span>
+            </button>
+          </div>
+        </header>
+        <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+          <div class="grid-row grid-gap-lg">
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img
+                class="usa-banner__icon usa-media-block__img"
+                src="/static/uswds-2.12.0/img/icon-dot-gov.svg"
+                role="img"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="usa-media-block__body">
+                <p>
+                  <strong> Official websites use .gov </strong>
+                  <br />
+                  A <strong>.gov</strong> website belongs to an official government
+                  organization in the United States.
+                </p>
+              </div>
+            </div>
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img
+                class="usa-banner__icon usa-media-block__img"
+                src="/static/uswds-2.12.0/img/icon-https.svg"
+                role="img"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="usa-media-block__body">
+                <p>
+                  <strong> Secure .gov websites use HTTPS </strong>
+                  <br />
+                  A <strong>lock</strong> (
+                  <span class="icon-lock"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="52"
+                      height="64"
+                      viewBox="0 0 52 64"
+                      class="usa-banner__lock-image"
+                      role="img"
+                      aria-labelledby="banner-lock-title-default banner-lock-description-default"
+                      focusable="false"
+                    >
+                      <title id="banner-lock-title-default">Lock</title>
+                      <desc id="banner-lock-description-default">A locked padlock</desc>
+                      <path
+                        fill="#000000"
+                        fill-rule="evenodd"
+                        d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                      /></svg
+                  ></span>
+                  ) or <strong>https://</strong> means you’ve safely connected to
+                  the .gov website. Share sensitive information only on official,
+                  secure websites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-
-    <div class="header-bar">
-        <h1>Ableist Language Detector for Job Descriptions</h1>
-        <p>Powered by the Department of Labor Office of Disability Employment Policy and xD.gov </p>
-    </div>
-</div>
+    </section>
 
     {% block maincontent %}
     {% endblock %}
+  
 
-
+  <script src="/static/uswds-2.12.0/js/uswds.min.js"></script>
   </body>
 </html>

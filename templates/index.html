@@ -1,14 +1,84 @@
 {% extends "layout.html" %}
 
     {% block maincontent %}
+	<div class="usa-overlay"></div>
+	<header class="usa-header usa-header--extended">
+	<div class="usa-navbar">
+		<div class="usa-logo" id="extended-logo">
+		<em class="usa-logo__text">
+			<a href="javascript:void(0)" title="Ableist Language Detector for Job Descriptions">
+			Ableist Language Detector for Job Descriptions
+			</a>
+		</em>
+		</div>
+		<button class="usa-menu-btn">Menu</button>
+	</div>
+	<nav aria-label="Primary navigation" class="usa-nav">
+		<div class="usa-nav__inner">
+		<button class="usa-nav__close">
+			<img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
+		</button>
+		<ul class="usa-nav__primary usa-accordion">
+			<li class="usa-nav__primary-item">
+			<a href="javascript:void(0)" class="usa-nav__link usa-current">
+				<span>Home</span>
+			</a>
+			</li>
+
+			<li class="usa-nav__primary-item">
+			<a href="javascript:void(0)" class="usa-nav__link">
+				<span>About</span>
+			</a>
+			</li>
+		</ul>
+		</div>
+		</div>
+	</nav>
+
+	</header>
+
+	<div class="usa-section">
+		<div class="grid-container">
+			<div class="grid-row grid-gap">
+				<main class="" id="main-content">
+					<div class="usa-prose">
+						<h1>Get Started</h1>
+		
+						<p>
+						Paste the job description into the textbox below.    
+						</p>
+
+						<hr>
+
+						<form class="usa-form usa-form--large">
+							<fieldset class="usa-fieldset">
+							  <textarea
+								class="usa-textarea usa-textarea--xl"
+								id="first-name"
+								name="first-name"
+								type="text"
+								required
+								aria-required="true"
+							  ></textarea>
+
+							</fieldset>
+						</form>
+
+						  <button class="usa-button">Default</button>
+					</div>
+				</main>
+				
+			
+			</div>
+		
+		</div>
+
+		
+	
 	<div class="container">
 		<div class="textbox">
-			<h4>How to use this tool</h4>
-			<p>
-				Ableist language is language that is offensive to people with disability. 
-				This type of language in job descriptions can cause people with disabilities to feel excluded from jobs that they are qualified for. 
-				This tool checks job descriptions for ableist language and suggests alternative phrasing that supports more fair and inclusive hiring.
-			</p>
+
+		
 		</div>
 		<div class="inputbox">
 			<form action="{{ url_for('predict')}}" method="POST">
@@ -20,21 +90,8 @@
 		
 	</div>
 
-	<br />
-
-	<h2>Example Jobpost</h2>
-	<p>requirements
-		- must be able to move your hands repeatedly
-		- type on a computer
-		- comfortable with lifting heavy boxes
-		- excellent communication skills
-		- move your wrists in circles and bend your arms</p>
-		
-	</div>
-
 	
-	
-
+</div>
 </body>
 </html>
 {% endblock %}
