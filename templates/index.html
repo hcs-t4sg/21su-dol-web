@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
     {% block maincontent %}
-	<div class="usa-overlay"></div>
+	<!-- <div class="usa-overlay"></div>
 	<header class="usa-header usa-header--extended">
 	<div class="usa-navbar">
 		<div class="usa-logo" id="extended-logo">
@@ -35,12 +35,12 @@
 		</div>
 	</nav>
 
-	</header>
+	</header> -->
 
-	<div class="usa-section">
-		<div class="grid-container">
+	<div class="usa-section left-margin">
+		<div class="grid-container left-margin">
 			<div class="grid-row grid-gap">
-				<main class="" id="main-content">
+				<main class="left-margin" id="main-content">
 					<div class="usa-prose">
 						<h1>Get Started</h1>
 		
@@ -50,21 +50,23 @@
 
 						<hr>
 
-						<form class="usa-form usa-form--large">
+						<form class="usa-form usa-form--large " action="{{ url_for('predict')}}" method="POST">
 							<fieldset class="usa-fieldset">
 							  <textarea
 								class="usa-textarea usa-textarea--xl"
-								id="first-name"
-								name="first-name"
+								name="message" 
 								type="text"
 								required
 								aria-required="true"
+								placeholder="Enter Job Description"
 							  ></textarea>
 
 							</fieldset>
 						</form>
 
-						  <button class="usa-button">Default</button>
+						<br />
+
+						<button class="usa-button" style="float: right">Check Job Description</button>
 					</div>
 				</main>
 				
@@ -72,23 +74,6 @@
 			</div>
 		
 		</div>
-
-		
-	
-	<div class="container">
-		<div class="textbox">
-
-		
-		</div>
-		<div class="inputbox">
-			<form action="{{ url_for('predict')}}" method="POST">
-				<textarea class="text-input" name="message" placeholder="Enter Job Description"></textarea>
-				<input type="submit" class="input-bttn" value="Check Job Description">
-			</form>
-		</div>
-
-		
-	</div>
 
 	
 </div>
