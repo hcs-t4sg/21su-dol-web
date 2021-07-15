@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,request
-from ability_skills_decoder import decoder
+from ableist_language_detector import detector
 from termcolor import colored
 from functools import reduce
 from itertools import chain
@@ -15,12 +15,12 @@ TEMPLATES_AUTO_RELOAD = True
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
         message = request.form['message']
         data = message
-        ableist_language = decoder.find_ableist_language(data)
+        ableist_language = detector.find_ableist_language(data)
 
         ## Finding number of ableist words
         length = len(ableist_language)
