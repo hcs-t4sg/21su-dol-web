@@ -29,9 +29,8 @@ def predict():
 
         for word in ls:
             data = data.replace(word, '<mark style="background: #00ced1!important">%s</mark>' % word)
-
     
-    return render_template('result.html',prediction = ableist_language, length=length, ls=ls, data=data, result=data)
+    return render_template('result.html',prediction = ableist_language, length=length, ls=ls, result=data)
 
 if __name__ == '__main__':
 	app.run(debug=True)

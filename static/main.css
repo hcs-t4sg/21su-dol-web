@@ -4,6 +4,21 @@
     width: 100%;
 }
 
+hr {
+    height: 2px;
+    background-color: #005EA2;
+}
+
 .p {
     margin-top: 50px;
+}
+
+.result-box {
+    margin-top: 20px;
+    white-space: pre-line;
+    font-size: large;
+    border: 1px solid;
+    border-color: grey;
+    padding: 20px;
+    padding-top: 0;
 }

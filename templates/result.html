@@ -1,16 +1,36 @@
 {% extends "layout.html" %}
 
     {% block maincontent %}
+	<div class="usa-section left-margin">
+		<div class="grid-container left-margin">
+			<div class="grid-row grid-gap">
+				<main class="left-margin" id="main-content">
+					<div class="usa-prose">
+						<h1>Results</h1>
+		
+						<p>
+						We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language in this job processing.    
+						</p>
 
-	<div class="container">
+						<hr>
 
-		<h2>We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language</h2>
+						<div class ="result-box">
+							<h2 style="margin: 0;">Job Listing</h2>
+							{{result | safe}}
+						</div>
+						
 
-		<div class ="outputbox">
-			<p> {{result | safe}}</p>
+						<!-- <button class="usa-button" style="float: right"><a href="/predict">Check Job Description</ahref></button> -->
+					</div>
+				</main>
+				
+			
+			</div>
+		
 		</div>
 
-	</div>
+	
+</div>	
 
 </body>
 </html>
