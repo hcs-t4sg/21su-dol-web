@@ -22,3 +22,21 @@ hr {
     padding: 20px;
     padding-top: 0;
 }
+
+.main-text {
+    margin-left: 30px;
+    float: left;
+    width: 60%;
+}
+
+.suggestions-box {
+    width: 40%;
+    float: left;
+    width:fit-content;
+}
+
+.form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
