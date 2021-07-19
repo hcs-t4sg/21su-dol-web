@@ -3,10 +3,10 @@
     {% block maincontent %}
 
 	<div class="usa-section left-margin">
-		<div class="grid-container left-margin">
-			<div class="grid-row grid-gap">
+		<div class="main-text left-margin">
+			<!-- <div class="grid-row grid-gap"> -->
 				<main class="left-margin" id="main-content">
-					<div class="usa-prose">
+					<div class="usa-prose" style="padding: 0">
 						<h1>Get Started</h1>
 		
 						<p>
@@ -14,8 +14,8 @@
 						</p>
 
 						<hr>
-
-						<form class="usa-form usa-form--large " action="{{ url_for('predict')}}" method="POST">
+						<!-- usa-form usa-form--large -->
+						<form class="form" action="{{ url_for('predict')}}" method="POST">
 							<fieldset class="usa-fieldset">
 							  <textarea
 								class="usa-textarea usa-textarea--xl"
@@ -24,6 +24,7 @@
 								required
 								aria-required="true"
 								placeholder="Enter Job Description"
+								style="max-width: 100%;"
 							  ></textarea>
 
 							</fieldset>
@@ -40,7 +41,7 @@
 				</main>
 				
 			
-			</div>
+			<!-- </div> -->
 		
 		</div>
 
