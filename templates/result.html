@@ -3,45 +3,53 @@
     {% block maincontent %}
 	<div class="usa-section left-margin">
 		<div class="main-text left-margin">
-				<main class="left-margin" id="main-content">
-					<div class="usa-prose">
-						<h1>Results</h1>
-		
-						<p>
-						We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language in this job processing.    
-						</p>
+			<main class="left-margin" id="main-content">
+				<div class="usa-prose">
+					<h1>Results</h1>
+	
+					<p>
+					We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language in this job processing.    
+					</p>
 
-						<hr>
+					<hr>
 
-						<div class ="result-box">
-							<h2 style="margin: 0;">Job Listing</h2>
-							{{result | safe}}
-						</div>
-
-						
-
-						
-
-						<!-- <button class="usa-button" style="float: right"><a href="/predict">Check Job Description</ahref></button> -->
+					<div class ="result-box">
+						<span>{{result | safe}}</span>
 					</div>
 
+					
 
-				</main>
-		
+					{% for term, replacements in alternatives.items() %} 
+					<div class="usa-alert usa-alert--info usa-alert--no-icon">
+						<div class="usa-alert__body">
+							<h4 class="usa-alert__heading">Ableist Language Detected: {{term}}</h4>
+							<p>Below are suggested phrases to replace the highlighted language.</p>
+							<ul> 
+								{% for word in replacements %} 
+								<li>{{ word }}</li>
+								{% endfor %}
+								<!-- <p>{{ examples.get(term) }}</p> -->
+							</ul>
+							
+						</div>
+					</div>
+					{% endfor %}
+
+					<!-- <button class="usa-button" style="float: right"><a href="/predict">Check Job Description</ahref></button> -->
+				</div>
+				
+			</main>
 		</div>
-		<div class="suggestions-box">
-			{% for term, replacements in alternatives.items() %} 
-			<ul>{{term}} : 
-				{% for word in replacements %} 
-				<li>{{ word }}</li>
-				{% endfor %}
-				<p>{{ examples.get(term) }}</p>
-			</ul>
-			{% endfor %}
-			</div>
 
+		
+		
+		<div class="suggestions-box">
+			
+			
+		</div>
+		
+	</div>	
 	
-</div>	
 
 </body>
 </html>
