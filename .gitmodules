@@ -1,0 +1,3 @@
+[submodule "ableist-language-detector"]
+	path = ableist-language-detector
+	url = https://github.com/inclusive-ai/ableist-language-detector.git
