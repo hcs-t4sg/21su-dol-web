@@ -1,0 +1,19 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    working_dir: /ui
+    ports:
+      - "1234:1234"
+      - "0.0.0.0:5000:5000"
+    volumes:
+      - .:/ui
+    deploy:
+      resources:
+          limits:
+            cpus: '1.50'
+            memory: 200M
+          reservations:
+            cpus: '0.25'
+            memory: 50M
+    command: ["python", "app.py", "runserver",  "localhost:5000"]
