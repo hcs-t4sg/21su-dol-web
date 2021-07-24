@@ -1,8 +1,13 @@
 from flask import Flask,render_template,url_for,request
-from ableist_language_detector import detector
 from termcolor import colored
 from functools import reduce
 from itertools import chain
+import sys
+print('PTH:', sys.path)
+import ableist_language_module.ableist_language_detector.detector as detector
+
+
+
 
 ## Things to do in back-end:
 ## - Maintain the formatting
