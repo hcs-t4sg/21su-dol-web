@@ -4,7 +4,8 @@
 
 	<div class="usa-section">
 		<div class="grid-container">
-			<div class="grid-row grid-gap">
+			<div class="grid-row grid-gap ">
+				<div class = grid-col-12>
 			<main class="" id="main-content">
 				<div class="usa-prose">
 					<h1>Results</h1>
@@ -14,22 +15,31 @@
 					</p>
 
 					<hr>
-
-					<div class ="result-box">
-						<span>{{result | safe}}</span>
-					</div>
-
 				
+					<div class="grid-container">
+						<div class="grid-row">
+						
+							<div class = "grid-col-8">
+								<div class ="result-box">
+									<span>{{result | safe}}</span>
+								</div>
+							</div>
 
-					{% for term, replacements in alternatives.items() %} 
-					<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
-					{% endfor %}
-					<div class="usa-alert usa-alert--info usa-alert--no-icon">
-						<div id='output' class="usa-alert__body">
-							<h4>Click on a word to see details</h4>
+						
+							<div class = "grid-col-4" style = "padding-left: 15px;">
+								{% for term, replacements in alternatives.items() %} 
+								<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
+								{% endfor %}
+									<div class="usa-alert usa-alert--info usa-alert--no-icon">
+										<div id='output' class="usa-alert__body">
+											<h4>Click on a word to see details</h4>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				
+					
 
 					<script>
 						function myFunction(id) {
@@ -62,11 +72,10 @@
 		
 		<div class="suggestions-box">
 			
-			
 		</div>
 	</div>
+	</div>
 	</div>	
-	
 
 </body>
 </html>

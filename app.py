@@ -52,5 +52,9 @@ def predict():
 
     return render_template('result.html',prediction = ableist_language, length=length, result=result, alternatives=alternatives, examples=examples, term_id=term_id)
 
+@app.route("/about")
+def about():
+    return render_template('about.html') 
+
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')

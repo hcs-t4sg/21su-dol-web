@@ -3282,7 +3282,7 @@ button.usa-combo-box__clear-input:focus{
 }
 
 .grid-col-3{
-  flex:0 1 auto;
+  flex:0 0 auto;
   width:25%;
 }
 
@@ -3297,12 +3297,12 @@ button.usa-combo-box__clear-input:focus{
 }
 
 .grid-col-6{
-  flex:0 1 auto;
+  flex:0 0 auto;
   width:50%;
 }
 
 .grid-col-7{
-  flex:0 1 auto;
+  flex:0 0 auto;
   width:58.3333333333%;
 }
 
