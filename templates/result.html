@@ -19,26 +19,40 @@
 						<span>{{result | safe}}</span>
 					</div>
 
-					
+				
 
 					{% for term, replacements in alternatives.items() %} 
+					<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
+					{% endfor %}
 					<div class="usa-alert usa-alert--info usa-alert--no-icon">
-						<div class="usa-alert__body">
-							<h4 class="usa-alert__heading">Ableist Language Detected: {{term}}</h4>
-							<p>Below are suggested phrases to replace the highlighted language.</p>
-							<ul> 
-								{% for word in replacements %} 
-								<li>{{ word }}</li>
-								{% endfor %}
-								<!-- <p>{{ examples.get(term) }}</p> -->
-							</ul>
-							
+						<div id='output' class="usa-alert__body">
+							<h4>Click on a word to see details</h4>
 						</div>
 					</div>
-					{% endfor %}
+				
 
+					<script>
+						function myFunction(id) {
+							let words = document.querySelector(`#${id}`);
+							let alt_verbs = JSON.parse(words.dataset.alternatives)
 
-					<!-- <button class="usa-button" style="float: right"><a href="/predict">Check Job Description</ahref></button> -->
+							header = `<h4 class="usa-alert__heading">Ableist Language Detected: ${words.dataset.term}</h4>`
+							subtitle = "<p>Below are suggested phrases to replace the highlighted language.</p>"
+
+							ul_start = "<ul>"
+							ul_end = "</ul"
+
+							example = `<p>Example: ${words.dataset.example}</p>`
+							document.getElementById('output').innerHTML = header + subtitle + ul_start;
+							for (let i = 0; i < alt_verbs.length; i++) {
+								verb = alt_verbs[i]
+								document.getElementById('output').innerHTML += `<li>${verb}</li>`
+							}
+							document.getElementById('output').innerHTML += ul_end + example
+						}
+					</script>
+					
+
 				</div>
 				
 			</main>
