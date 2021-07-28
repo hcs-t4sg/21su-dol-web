@@ -1,4 +1,4 @@
-.left-margin {
+/* .left-margin {
     margin: 0;
     float: left;
     width: 60%;
@@ -11,7 +11,7 @@ hr {
 
 .p {
     margin-top: 50px;
-}
+} */
 
 .result-box {
     margin-top: 20px;
@@ -22,7 +22,7 @@ hr {
     padding: 20px;
     padding-top: 0;
 }
-
+/* 
 .main-text {
     margin-left: 30px;
     float: left;
@@ -39,4 +39,4 @@ hr {
     width: 100%;
     margin: 0;
     padding: 0;
-}
+} */
