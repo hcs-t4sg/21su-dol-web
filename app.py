@@ -2,7 +2,7 @@ from flask import Flask,render_template,url_for,request
 from termcolor import colored
 from functools import reduce
 from itertools import chain
-import ableist_language_module.ableist_language_detector.detector as detector
+import ableist_language_detector.detector as detector
 from highlight import highlight, AbleistLanguage
 
 app = Flask(__name__)
@@ -27,14 +27,14 @@ def predict():
         for i, ableist_term in enumerate(ableist_language):
             term = str(ableist_term)
             ableist_terms.append(AbleistLanguage(
-                text=term, 
-                start=ableist_term.start, 
-                end=ableist_term.end, 
+                text=term,
+                start=ableist_term.start,
+                end=ableist_term.end,
             ))
             term_id[term] = term.replace(" ", "")
             alternatives[term] = ableist_term.data.alternative_verbs
             examples[term] = str(ableist_term.data.example)
-        
+
 
         # convert list of dataclasses to sorted list of (start, end) indices
         sorted_idx_list = sorted([(data.start, data.end) for data in ableist_language])
@@ -54,7 +54,7 @@ def predict():
 
 @app.route("/about")
 def about():
-    return render_template('about.html') 
+    return render_template('about.html')
 
 if __name__ == '__main__':
 	app.run(debug=True, host='0.0.0.0')
