@@ -1,17 +1,20 @@
-/* .left-margin {
-    margin: 0;
+.left-margin {
+    margin-left: 0;
     float: left;
-    width: 60%;
+    width: 100%;
 }
+
 
 hr {
     height: 2px;
     background-color: #005EA2;
 }
 
-.p {
-    margin-top: 50px;
-} */
+.grid-container {
+    max-width: 100vw;
+    margin: 0;
+    margin-right: 0;
+}
 
 .result-box {
     margin-top: 20px;
@@ -21,23 +24,20 @@ hr {
     border-color: grey;
     padding: 20px;
     padding-top: 0;
-}
-/* 
-.main-text {
-    margin-left: 30px;
-    float: left;
-    width: 60%;
+    max-width: 100%; 
+    height: 15rem;
 }
 
-.suggestions-box {
-    width: 40%;
-    float: left;
-    width:fit-content;
+.info-box {
+    margin-left: 20px; 
+    background-color: #E7F6F8; 
+    padding: 15px; 
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.5; 
+    margin-top: 8px;
+    max-width: 450px;
+    height: 15rem;
+    font-size: smaller;
 }
-
-.form {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-} */
 

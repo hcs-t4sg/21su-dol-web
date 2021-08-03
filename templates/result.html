@@ -4,77 +4,61 @@
 
 	<div class="usa-section">
 		<div class="grid-container">
-			<div class="grid-row grid-gap ">
-				<div class = grid-col-12>
-			<main class="" id="main-content">
-				<div class="usa-prose">
-					<h1>Results</h1>
-	
+			<div class="grid-row">
+				<div style="width:50%">
+					<h1>We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language in this job processing. </h1>
+			
 					<p>
-					We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language in this job processing.    
+					Click on a word to see details    
 					</p>
-
+							
 					<hr>
-				
-					<div class="grid-container">
-						<div class="grid-row">
-						
-							<div class = "grid-col-8">
-								<div class ="result-box">
-									<span>{{result | safe}}</span>
-								</div>
-							</div>
+				</div>
+			</div>
 
-						
-							<div class = "grid-col-4" style = "padding-left: 15px;">
-								{% for term, replacements in alternatives.items() %} 
-								<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
-								{% endfor %}
-									<div class="usa-alert usa-alert--info usa-alert--no-icon">
-										<div id='output' class="usa-alert__body">
-											<h4>Click on a word to see details</h4>
-										</div>
-									</div>
-								</div>
+			<div class="grid-row">
+				<main class="" id="main-content" style="width:50%">
+					<div class="usa-prose">
+						<div class ="result-box">
+							<span>{{result | safe}}</span>
+						</div>
+					</div>
+				</main>
+
+				<div class = "grid-col-4" style = "padding-left: 15px; margin-top: 5px;">
+					{% for term, replacements in alternatives.items() %} 
+					<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
+					{% endfor %}
+						<div class="usa-alert usa-alert--info usa-alert--no-icon">
+							<div id='output' class="usa-alert__body">
+								<h4>Click on a word to see details</h4>
 							</div>
 						</div>
 					</div>
-					
-
-					<script>
-						function myFunction(id) {
-							let words = document.querySelector(`#${id}`);
-							let alt_verbs = JSON.parse(words.dataset.alternatives)
-
-							header = `<h4 class="usa-alert__heading">Ableist Language Detected: ${words.dataset.term}</h4>`
-							subtitle = "<p>Below are suggested phrases to replace the highlighted language.</p>"
-
-							ul_start = "<ul>"
-							ul_end = "</ul"
-
-							example = `<p>Example: ${words.dataset.example}</p>`
-							document.getElementById('output').innerHTML = header + subtitle + ul_start;
-							for (let i = 0; i < alt_verbs.length; i++) {
-								verb = alt_verbs[i]
-								document.getElementById('output').innerHTML += `<li>${verb}</li>`
-							}
-							document.getElementById('output').innerHTML += ul_end + example
-						}
-					</script>
-					
-
 				</div>
-				
-			</main>
-		</div>
 
-		
-		
-		<div class="suggestions-box">
-			
+				<script>
+					function myFunction(id) {
+						let words = document.querySelector(`#${id}`);
+						let alt_verbs = JSON.parse(words.dataset.alternatives)
+
+						header = `<h4 class="usa-alert__heading">Ableist Language Detected: ${words.dataset.term}</h4>`
+						subtitle = "<p>Below are suggested phrases to replace the highlighted language.</p>"
+
+						ul_start = "<ul>"
+						ul_end = "</ul"
+
+						example = `<p>Example: ${words.dataset.example}</p>`
+						document.getElementById('output').innerHTML = header + subtitle + ul_start;
+						for (let i = 0; i < alt_verbs.length; i++) {
+							verb = alt_verbs[i]
+							document.getElementById('output').innerHTML += `<li>${verb}</li>`
+						}
+						document.getElementById('output').innerHTML += ul_end + example
+					}
+				</script>
+			</div>
 		</div>
-	</div>
-	</div>
 	</div>	
 
 </body>
