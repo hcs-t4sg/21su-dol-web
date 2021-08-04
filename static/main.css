@@ -29,15 +29,7 @@ hr {
 }
 
 .info-box {
-    margin-left: 20px; 
     background-color: #E7F6F8; 
-    padding: 15px; 
-    padding-left: 30px;
-    padding-right: 30px;
     line-height: 1.5; 
-    margin-top: 8px;
-    max-width: 450px;
-    height: 15rem;
-    font-size: smaller;
 }
 

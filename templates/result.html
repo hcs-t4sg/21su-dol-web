@@ -2,63 +2,88 @@
 
     {% block maincontent %}
 
+	<nav aria-label="Primary navigation" class="usa-nav left-margin">
+        <div class="usa-nav__inner left-margin">
+        <button class="usa-nav__close">
+          <img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+          <a href="/" class="usa-nav__link usa-current">
+            <span>Home</span>
+          </a>
+          </li>
+    
+          <li class="usa-nav__primary-item">
+          <a href="{{ url_for('about') }}" class="usa-nav__link">
+            <span>About</span>
+          </a>
+          </li>
+        </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
+	
 	<div class="usa-section">
-		<div class="grid-container">
-			<div class="grid-row">
-				<div style="width:50%">
-					<h1>We found <b style='color: #00ced1 !important;'>{{length}}</b> instances of ableist language in this job processing. </h1>
-			
-					<p>
-					Click on a word to see details    
-					</p>
-							
-					<hr>
-				</div>
-			</div>
-
-			<div class="grid-row">
-				<main class="" id="main-content" style="width:50%">
-					<div class="usa-prose">
-						<div class ="result-box">
-							<span>{{result | safe}}</span>
-						</div>
+			<div class="grid-container">
+				<div class="grid-row grid-gap">
+					<div class ="grid-col-6">
+						<h1>We found <b style='color:#00BDE3 !important;'>{{length}}</b> instances of ableist language in this job processing. </h1>
+						{% if show_results %}
+						<p>
+						Click on a word to see details    
+						</p>
+						{% endif %}
+						<hr>
 					</div>
-				</main>
+				</div>
 
-				<div class = "grid-col-4" style = "padding-left: 15px; margin-top: 5px;">
-					{% for term, replacements in alternatives.items() %} 
-					<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
-					{% endfor %}
-						<div class="usa-alert usa-alert--info usa-alert--no-icon">
-							<div id='output' class="usa-alert__body">
-								<h4>Click on a word to see details</h4>
+				<div class="grid-row grid-gap">
+					<main class="grid-col-6" id="main-content">
+						<div class="usa-prose">
+							<div class ="result-box">
+								<span>{{result | safe}}</span>
 							</div>
 						</div>
+					</main>
+
+					<div class = "grid-col-4">
+						{% for term, replacements in alternatives.items() %} 
+						<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
+						{% endfor %}
+						{% if show_results %}
+							<div class="usa-alert usa-alert--info usa-alert--no-icon">
+								<div id='output' class="usa-alert__body">
+									<h4>Click on a word to see details</h4>
+								</div>
+							</div>
+						{% endif %}
+						</div>
 					</div>
-				</div>
 
-				<script>
-					function myFunction(id) {
-						let words = document.querySelector(`#${id}`);
-						let alt_verbs = JSON.parse(words.dataset.alternatives)
+					<script>
+						function myFunction(id) {
+							let words = document.querySelector(`#${id}`);
+							let alt_verbs = JSON.parse(words.dataset.alternatives)
 
-						header = `<h4 class="usa-alert__heading">Ableist Language Detected: ${words.dataset.term}</h4>`
-						subtitle = "<p>Below are suggested phrases to replace the highlighted language.</p>"
+							header = `<h4 class="usa-alert__heading">Ableist Language Detected: ${words.dataset.term}</h4>`
+							subtitle = "<p>Below are suggested phrases to replace the highlighted language.</p>"
 
-						ul_start = "<ul>"
-						ul_end = "</ul"
+							ul_start = "<ul>"
+							ul_end = "</ul"
 
-						example = `<p>Example: ${words.dataset.example}</p>`
-						document.getElementById('output').innerHTML = header + subtitle + ul_start;
-						for (let i = 0; i < alt_verbs.length; i++) {
-							verb = alt_verbs[i]
-							document.getElementById('output').innerHTML += `<li>${verb}</li>`
+							example = `<p>Example: ${words.dataset.example}</p>`
+							document.getElementById('output').innerHTML = header + subtitle + ul_start;
+							for (let i = 0; i < alt_verbs.length; i++) {
+								verb = alt_verbs[i]
+								document.getElementById('output').innerHTML += `<li>${verb}</li>`
+							}
+							document.getElementById('output').innerHTML += ul_end + example
 						}
-						document.getElementById('output').innerHTML += ul_end + example
-					}
-				</script>
+					</script>
+				</div>
 			</div>
-		</div>
 	</div>	
 
 </body>
