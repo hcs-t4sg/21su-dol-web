@@ -49,8 +49,9 @@ def predict():
 
         # for word in ls:
         #     data = data.replace(word, '<mark style="background: #00ced1!important">%s</mark>' % word)
+        show_results = False if length == 0 else True
 
-    return render_template('result.html',prediction = ableist_language, length=length, result=result, alternatives=alternatives, examples=examples, term_id=term_id)
+    return render_template('result.html',prediction = ableist_language, length=length, result=result, alternatives=alternatives, examples=examples, term_id=term_id, show_results=show_results)
 
 @app.route("/about")
 def about():

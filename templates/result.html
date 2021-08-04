@@ -30,11 +30,11 @@
 				<div class="grid-row grid-gap">
 					<div class ="grid-col-6">
 						<h1>We found <b style='color:#00BDE3 !important;'>{{length}}</b> instances of ableist language in this job processing. </h1>
-				
+						{% if show_results %}
 						<p>
 						Click on a word to see details    
 						</p>
-								
+						{% endif %}
 						<hr>
 					</div>
 				</div>
@@ -52,11 +52,13 @@
 						{% for term, replacements in alternatives.items() %} 
 						<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
 						{% endfor %}
+						{% if show_results %}
 							<div class="usa-alert usa-alert--info usa-alert--no-icon">
 								<div id='output' class="usa-alert__body">
 									<h4>Click on a word to see details</h4>
 								</div>
 							</div>
+						{% endif %}
 						</div>
 					</div>
 
