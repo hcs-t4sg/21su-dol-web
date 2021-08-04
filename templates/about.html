@@ -1,6 +1,28 @@
 {% extends "layout.html" %}
 
     {% block maincontent %}
+	<nav aria-label="Primary navigation" class="usa-nav left-margin">
+        <div class="usa-nav__inner left-margin">
+        <button class="usa-nav__close">
+          <img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+          <a href="/" class="usa-nav__link">
+            <span>Home</span>
+          </a>
+          </li>
+    
+          <li class="usa-nav__primary-item">
+          <a href="{{ url_for('about') }}" class="usa-nav__link usa-current">
+            <span>About</span>
+          </a>
+          </li>
+        </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
 	
 	<div class="usa-section">
 		<div class="grid-container">

@@ -1,11 +1,33 @@
 {% extends "layout.html" %}
 
     {% block maincontent %}
+	<nav aria-label="Primary navigation" class="usa-nav left-margin">
+        <div class="usa-nav__inner left-margin">
+        <button class="usa-nav__close">
+          <img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
+        </button>
+        <ul class="usa-nav__primary usa-accordion">
+          <li class="usa-nav__primary-item">
+          <a href="/" class="usa-nav__link usa-current">
+            <span>Home</span>
+          </a>
+          </li>
+    
+          <li class="usa-nav__primary-item">
+          <a href="{{ url_for('about') }}" class="usa-nav__link">
+            <span>About</span>
+          </a>
+          </li>
+        </ul>
+        </div>
+        </div>
+      </nav>
+    </header>
 	
 	<div class="usa-section">
 		<div class="grid-container">
-			<div class="grid-row">
-				<div style="width:50%">
+			<div class="grid-row grid-gap">
+				<div class="grid-col-6">
 					<h1>Get Started</h1>
 			
 					<p>
@@ -16,8 +38,8 @@
 				</div>
 			</div>
 
-			<div class="grid-row">
-				<main class="" id="main-content" style="width:50%">
+			<div class="grid-row grid-gap">
+				<main class="grid-col-6" id="main-content">
 					<div class="usa-prose">
 							<form class="form" action="{{ url_for('predict')}}" method="POST">
 								<fieldset class="usa-fieldset">
@@ -28,26 +50,31 @@
 									required
 									aria-required="true"
 									placeholder="Enter Job Description"
-									style="max-width: 100%; height: 15rem; resize: none"
+									style="max-width: 100%; min-height: 15rem; resize: none;;"
 									
 								></textarea>
 
 								</fieldset>
-
-								<br />
-
-								<input type="submit" class="usa-button" style="float: left" value="Check Job Description">
-							</form>
+							
 					</div>
 				</main>
+				
 				<div class = "grid-col-4 info-box">
-					<h3>How To Use This Tool</h3>
+					<h2>How To Use This Tool</h2>
 					<p>
 					Ableist language is language that is offensive to people with disability. This type of language in job descriptions can cause people with disabilities to feel excluded from jobs that they are qualified for. This tool checks job descriptions for ableist language and suggests alternative phrasing that supports more fair and inclusive hiring.
 					</p>
 				</div>
 			</div>
 
-		</div>
+			<div class="grid-row">
+				<div class="grid-col-6">
+					<br />
+
+					<input type="submit" class="usa-button" style="float: left" value="Check Job Description">
+				</form>
+				</div>
+			</div>
+		</div>		
 	</div>
 {% endblock %}

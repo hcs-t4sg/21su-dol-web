@@ -5,7 +5,7 @@
 
     <title>Ableist Language Detector for Job Descriptions</title>
     <script src="/static/uswds-2.12.0/js/uswds-init.min.js"></script>
-    <link rel="stylesheet" href="/static/uswds-2.12.0/css/uswds.min.css" />
+    <link rel="stylesheet" href="/static/uswds-2.12.0/css/uswds.css" />
     <link rel="stylesheet" href="/static/main.css">
   </head>
 
@@ -13,7 +13,7 @@
     <section class="usa-banner" aria-label="Official government website">
       <div class="usa-accordion">
         <header class="usa-banner__header">
-          <div class="usa-banner__inner">
+          <div class="usa-banner__inner left-margin">
             <div class="grid-col-auto">
               <img
                 class="usa-banner__header-flag"
@@ -38,7 +38,7 @@
             </button>
           </div>
         </header>
-        <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+        <div class="usa-banner__content usa-accordion__content left-margin" id="gov-banner-default">
           <div class="grid-row grid-gap-lg">
             <div class="usa-banner__guidance tablet:grid-col-6">
               <img
@@ -101,9 +101,9 @@
     </section>
 
     <div class="usa-overlay"></div>
-    <header class="usa-header usa-header--extended" style="display: flex; flex-wrap: wrap;">
-      <div class="usa-navbar" style="max-width:100vh; flex-basis: 100%; flex: 1; margin: 0">
-        <div class="usa-logo" id="extended-logo" style="max-width:100vh; flex-basis: 100%; flex: 1">
+    <header class="usa-header usa-header--extended">
+      <div class="usa-navbar left-margin">
+        <div class="usa-logo">
           <em class="usa-logo__text">
             <a href="{{ url_for('home') }}" title="Ableist Language Detector for Job Descriptions">
             Ableist Language Detector for Job Descriptions
@@ -113,28 +113,6 @@
         <button class="usa-menu-btn">Menu</button>
       </div>
 
-      <nav aria-label="Primary navigation" class="usa-nav left-margin">
-        <div class="usa-nav__inner left-margin">
-        <button class="usa-nav__close">
-          <img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
-        </button>
-        <ul class="usa-nav__primary usa-accordion">
-          <li class="usa-nav__primary-item">
-          <a href="/" class="usa-nav__link usa-current">
-            <span>Home</span>
-          </a>
-          </li>
-    
-          <li class="usa-nav__primary-item">
-          <a href="{{ url_for('about') }}" class="usa-nav__link">
-            <span>About</span>
-          </a>
-          </li>
-        </ul>
-        </div>
-        </div>
-      </nav>
-    </header>
 
     {% block maincontent %}
     {% endblock %}
@@ -188,7 +166,6 @@
               <p class="usa-footer__logo-heading">xD - U.S. Census Bureau</p>
             </div>
           </div>
-        </div>
       </div>
     </footer>
   <script src="/static/uswds-2.12.0/js/uswds.min.js"></script>
