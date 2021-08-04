@@ -6844,6 +6844,13 @@ button.usa-combo-box__clear-input:focus{
   .usa-header--basic .usa-search{
     top:0;
   }
+  .usa-header--basic .usa-nav__primary-item .ul .li {
+    border-bottom: 2px solid white;
+  }
+
+  .usa-header--basic .usa-nav__primary-item .ul .li.active {
+    border-bottom: 2px solid black;
+  }
 }
 .usa-header--basic.usa-header--megamenu .usa-nav__inner{
   display:flex;
@@ -8235,6 +8242,10 @@ html.usa-js-loading .usa-nav__submenu.usa-megamenu{
   .usa-nav__primary > li{
     margin-bottom:0;
     max-width:unset;
+  }
+
+  .usa-nav__primary > li.active{
+    border-bottom: 2px solid black;
   }
   .usa-nav__primary-item{
     border-top:1px solid #dfe1e2;

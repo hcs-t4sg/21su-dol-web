@@ -5,7 +5,7 @@
 
     <title>Ableist Language Detector for Job Descriptions</title>
     <script src="/static/uswds-2.12.0/js/uswds-init.min.js"></script>
-    <link rel="stylesheet" href="/static/uswds-2.12.0/css/uswds.min.css" />
+    <link rel="stylesheet" href="/static/uswds-2.12.0/css/uswds.css" />
     <link rel="stylesheet" href="/static/main.css">
   </head>
 
@@ -87,8 +87,7 @@
                         fill="#000000"
                         fill-rule="evenodd"
                         d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
-                      /></svg
-                  ></span>
+                      /></svg></span>
                   ) or <strong>https://</strong> means you’ve safely connected to
                   the .gov website. Share sensitive information only on official,
                   secure websites.
@@ -115,23 +114,22 @@
 
       <nav aria-label="Primary navigation" class="usa-nav left-margin">
         <div class="usa-nav__inner left-margin">
-        <button class="usa-nav__close">
-          <img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
-        </button>
-        <ul class="usa-nav__primary usa-accordion">
-          <li class="usa-nav__primary-item">
-          <a href="/" class="usa-nav__link usa-current">
-            <span>Home</span>
-          </a>
-          </li>
-    
-          <li class="usa-nav__primary-item">
-          <a href="{{ url_for('about') }}" class="usa-nav__link">
-            <span>About</span>
-          </a>
-          </li>
-        </ul>
-        </div>
+          <button class="usa-nav__close">
+            <img src="/static/uswds-2.12.0/img/usa-icons/close.svg" role="img" alt="Close" />
+          </button>
+          <ul class="usa-nav__primary usa-accordion">
+              <li class="usa-nav__primary-item">
+                <a href="/" class="usa-nav__link">
+                  <span>Home</span>
+                </a>
+              </li>
+        
+              <li class="usa-nav__primary-item">
+                <a href="{{ url_for('about')}}" class="usa-nav__link">
+                  <span>About</span>
+                </a>
+              </li>
+          </ul>
         </div>
       </nav>
     </header>
