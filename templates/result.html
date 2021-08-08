@@ -32,7 +32,7 @@
 						<h1>We found <b style='color:#00BDE3 !important;'>{{length}}</b> instances of ableist language in this job description. </h1>
 						{% if show_results %}
 						<p>
-						Click on a word to see details    
+						Click on a highlighted phrase for more information  
 						</p>
 						{% endif %}
 						<hr>
@@ -55,7 +55,7 @@
 						{% if show_results %}
 							<div class="usa-alert usa-alert--info usa-alert--no-icon">
 								<div id='output' class="usa-alert__body">
-									<h4>Click on a word to see details</h4>
+									<h3 style="text-align: center;">Ableist Language Results</h3>
 								</div>
 							</div>
 						{% endif %}
@@ -67,8 +67,8 @@
 							let words = document.querySelector(`#${id}`);
 							let alt_verbs = JSON.parse(words.dataset.alternatives)
 
-							header = `<h4 class="usa-alert__heading">Ableist Language Detected: ${words.dataset.term}</h4>`
-							subtitle = "<p>Below are suggested phrases to replace the highlighted language.</p>"
+							header = `<h4 class="usa-alert__heading">"${words.dataset.term}"</h4>`
+							subtitle = "<p>Below are suggested phrases to replace the highlighted language:</p>"
 
 							ul_start = "<ul>"
 							ul_end = "</ul"
