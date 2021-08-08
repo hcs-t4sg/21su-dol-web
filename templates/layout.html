@@ -10,44 +10,28 @@
   </head>
 
   <body>
+    <main role="main" class="cd-main-content odep-content">
     <section class="usa-banner" aria-label="Official government website">
       <div class="usa-accordion">
         <header class="usa-banner__header">
           <div class="usa-banner__inner left-margin">
             <div class="grid-col-auto">
-              <img
-                class="usa-banner__header-flag"
-                src="/static/uswds-2.12.0/img/us_flag_small.png"
-                alt="U.S. flag"
-              />
+              <img class="usa-banner__header-flag" src="/static/uswds-2.12.0/img/us_flag_small.png" alt="U.S. flag"/>
             </div>
             <div class="grid-col-fill tablet:grid-col-auto">
-              <p class="usa-banner__header-text">
-                An official website of the United States government
-              </p>
-              <p class="usa-banner__header-action" aria-hidden="true">
-                Here’s how you know
-              </p>
+              <p class="usa-banner__header-text"> An official website of the United States government</p>
+              <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
             </div>
-            <button
-              class="usa-accordion__button usa-banner__button"
-              aria-expanded="false"
-              aria-controls="gov-banner-default"
-            >
+            <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
               <span class="usa-banner__button-text">Here’s how you know</span>
             </button>
           </div>
         </header>
+
         <div class="usa-banner__content usa-accordion__content left-margin" id="gov-banner-default">
           <div class="grid-row grid-gap-lg">
             <div class="usa-banner__guidance tablet:grid-col-6">
-              <img
-                class="usa-banner__icon usa-media-block__img"
-                src="/static/uswds-2.12.0/img/icon-dot-gov.svg"
-                role="img"
-                alt=""
-                aria-hidden="true"
-              />
+              <img class="usa-banner__icon usa-media-block__img" src="/static/uswds-2.12.0/img/icon-dot-gov.svg" role="img" alt="" aria-hidden="true"/>
               <div class="usa-media-block__body">
                 <p>
                   <strong> Official websites use .gov </strong>
@@ -58,39 +42,19 @@
               </div>
             </div>
             <div class="usa-banner__guidance tablet:grid-col-6">
-              <img
-                class="usa-banner__icon usa-media-block__img"
-                src="/static/uswds-2.12.0/img/icon-https.svg"
-                role="img"
-                alt=""
-                aria-hidden="true"
-              />
+              <img class="usa-banner__icon usa-media-block__img" src="/static/uswds-2.12.0/img/icon-https.svg" role="img" alt="" aria-hidden="true" />
               <div class="usa-media-block__body">
                 <p>
                   <strong> Secure .gov websites use HTTPS </strong>
                   <br />
                   A <strong>lock</strong> (
-                  <span class="icon-lock"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="52"
-                      height="64"
-                      viewBox="0 0 52 64"
-                      class="usa-banner__lock-image"
-                      role="img"
-                      aria-labelledby="banner-lock-title-default banner-lock-description-default"
-                      focusable="false"
-                    >
+                  <span class="icon-lock">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-title-default banner-lock-description-default" focusable="false">
                       <title id="banner-lock-title-default">Lock</title>
                       <desc id="banner-lock-description-default">A locked padlock</desc>
-                      <path
-                        fill="#000000"
-                        fill-rule="evenodd"
-                        d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
-                      /></svg></span>
-                  ) or <strong>https://</strong> means you’ve safely connected to
-                  the .gov website. Share sensitive information only on official,
-                  secure websites.
+                      <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/>
+                    </svg>
+                  </span>) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
                 </p>
               </div>
             </div>
@@ -100,75 +64,62 @@
     </section>
 
     <div class="usa-overlay"></div>
-    <header class="usa-header usa-header--extended">
-      <div class="usa-navbar left-margin">
-        <div class="usa-logo">
-          <em class="usa-logo__text">
-            <a href="{{ url_for('home') }}" title="Ableist Language Detector for Job Descriptions">
-            Ableist Language Detector for Job Descriptions
-            </a>
-          </em>
+      <header class="usa-header usa-header--extended">
+        <div class="usa-navbar left-margin">
+          <div class="usa-logo">
+            <em class="usa-logo__text">
+              <a href="{{ url_for('home') }}" title="Ableist Language Detector for Job Descriptions">
+              Ableist Language Detector for Job Descriptions
+              </a>
+            </em>
+          </div>
+          <button class="usa-menu-btn">Menu</button>
         </div>
-        <button class="usa-menu-btn">Menu</button>
-      </div>
-
 
     {% block maincontent %}
     {% endblock %}
-    <footer class="usa-footer usa-footer--slim" style="padding-left: 0;">
-      <div class="grid-container usa-footer__return-to-top">
-        <a href="#">Return to top</a>
-      </div>
-      <div class="usa-footer__primary-section">
-        <div class="usa-footer__primary-container grid-row">
-          <div class="mobile-lg:grid-col-8">
-            <nav class="usa-footer__nav" aria-label="Footer navigation,">
-              <ul class="grid-row grid-gap">
-                <li
-                  class="
-                    mobile-lg:grid-col-6
-                    desktop:grid-col-auto
-                    usa-footer__primary-content
-                  "
-                >
-                  <a class="usa-footer__primary-link" href="javascript:void(0);">
-                    Privacy Policy
-                  </a>
-                </li>
-              </ul>
-            </nav>
+
+    </main>
+  
+    <footer style="padding-left: 0;">
+        <div class="grid-container usa-footer__return-to-top">
+          <a href="#">Return to top</a>
+        </div>
+        <div class="grid container" style="background-color:#f0f0f0;">
+          <div class="grid-row">
+            <div class="mobile-lg:grid-col-8">
+              <nav class="usa-footer__nav" aria-label="Footer navigation,">
+                <ul class="grid-row grid-gap">
+                  <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content" >
+                    <a class="usa-footer__primary-link" href="javascript:void(0);"> Privacy Policy </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="usa-footer__secondary-section">
-        <div class="grid-container">
+
+        <div class="grid-continer" style='background-color:#dfe1e2; padding-left: 1.5rem; padding-top: 1rem;  padding-bottom: 1rem;'>
           <div class="usa-footer__logo grid-row grid-gap-2">
             <div class="grid-col-auto">
-              <img
-                class="usa-footer__logo-img"
-                src="/static/uswds-2.12.0/img/DOL-MasterLogo_BLUE.png"
-                alt=""
-              />
+                <img class="usa-footer__logo-img" src="/static/uswds-2.12.0/img/DOL-MasterLogo_BLUE.png" alt="" width="70" height="70"/>
             </div>
             <div class="grid-col-auto">
               <p class="usa-footer__logo-heading">Department of Labor</p>
             </div>
-
             <div class="grid-col-auto">
-              <img
-                class="usa-footer__logo-img"
-                src="/static/uswds-2.12.0/img/xD-logo.png"
-                alt=""
-              />
+              <img class="usa-footer__logo-img" src="/static/uswds-2.12.0/img/xD-logo.png" alt=""  width="40" height="40"/>
             </div>
             <div class="grid-col-auto">
               <p class="usa-footer__logo-heading">xD - U.S. Census Bureau</p>
             </div>
           </div>
-      </div>
+        </div>
+
     </footer>
+
   <script src="/static/uswds-2.12.0/js/uswds.min.js"></script>
-  </body>
   
-  
+</body>
+
 </html>
