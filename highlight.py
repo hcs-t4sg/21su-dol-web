@@ -42,7 +42,7 @@ def highlight(text: str, terms_list: List[Tuple[int, int]]) -> str:
         # get all highlighted terms
         
         # result += f"<em>{doc[term_start:term_end].text}</em>"
-        result += f"<mark style=\"background: #FFBE2E!important\" onclick=\"myFunction('{word_id}')\">{word}</mark>"
+        result += f"<mark style=\"background: #FFBE2E!important; cursor: pointer; \" onclick=\"myFunction('{word_id}')\">{word}</mark>"
         # if the current highlighted term is in the middle of the doc, right pad with a space
         if term_end < len(doc):
             result += " "
