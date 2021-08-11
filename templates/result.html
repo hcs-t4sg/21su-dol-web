@@ -2,6 +2,29 @@
 
     {% block maincontent %}
 
+	<style>
+		.results {
+		grid-area: results;
+		}
+		.info {
+		grid-area: info;
+		}
+		.results-wrapper {
+			display: grid;
+			gap: 20px;
+			grid-template-areas:
+			"results"
+			"info";
+		}
+		@media (min-width: 1000px) {
+			.results-wrapper {
+				grid-template-columns: 2fr 1fr;
+				grid-template-areas:
+				"results   info";
+			}
+		}
+	</style>
+
 	<nav aria-label="Primary navigation" class="usa-nav left-margin">
         <div class="usa-nav__inner left-margin">
         <button class="usa-nav__close">
@@ -39,26 +62,30 @@
 					</div>
 				</div>
 
-				<div class="grid-row grid-gap">
-					<main class="tablet:grid-col-8" id="main-content">
-						<div class="usa-prose">
-							<div class ="result-box">
-								<span>{{result | safe}}</span>
-							</div>
-						</div>
-					</main>
-
-					<div class = "tablet:grid-col-4">
-						{% for term, replacements in alternatives.items() %} 
-						<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
-						{% endfor %}
-						{% if show_results %}
-							<div class="usa-alert usa-alert--info usa-alert--no-icon">
-								<div id='output' class="usa-alert__body">
-									<h3 style="text-align: center;">Ableist Language Results</h3>
+				<div class="grid-gap results-wrapper" >
+					<div class="results">
+						<main class="tablet:grid-col-8" id="main-content" style="width:100%;">
+							<div class="usa-prose">
+								<div class ="result-box">
+									<span>{{result | safe}}</span>
 								</div>
 							</div>
-						{% endif %}
+						</main>
+					</div>
+
+					<div class="info">
+						<div class = "tablet:grid-col-4" style="padding-left: 2em; width:100%">
+							{% for term, replacements in alternatives.items() %} 
+							<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
+							{% endfor %}
+							{% if show_results %}
+								<div class="usa-alert usa-alert--info usa-alert--no-icon">
+									<div id='output' class="usa-alert__body">
+										<h3 style="text-align: center;">Ableist Language Results</h3>
+									</div>
+								</div>
+							{% endif %}
+							</div>
 						</div>
 					</div>
 
