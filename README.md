@@ -3,15 +3,15 @@
 The Office of Disability Employment Policy of the Department of Labor (DOL) is building out an [NLP algorithm](https://github.com/inclusive-ai/ableist-language-detector) that analyzes job posts to understand how accessible they are to people with disabilities—checking whether text skews towards abilities instead of skills. This in an accessibility toolkit or checklist for employers to create awareness and actionable insights to ensure companies are being inclusive to people with disabilities. This project is be part of the Combating AI Bias Toolkit. 
 
 [Harvard T4SG](https://socialgood.hcs.harvard.edu/) is tasked to develop a website wrapper so that users can copy/paste text into the browser which would then call the model that the DOL is building and would pass back the results that the model finds. The contributors for this projects are:
-⋅⋅* Jamie Lu [Github](https://github.com/lujamie)
-⋅⋅* Zad Chin [Github](https://github.com/Iwanttobeatuna)
-⋅⋅* Kevin Tan [Github](https://github.com/kevintan250)
+- Jamie Lu [Github](https://github.com/lujamie)
+- Zad Chin [Github](https://github.com/Iwanttobeatuna)
+- Kevin Tan [Github](https://github.com/kevintan250)
 
 ##  Installation & Setup
 
 To install, Python Flask module and Docker is required. To install, run the following in your terminal: 
-..* Flask : `pip install flask`
-..* Docker : `docker compose -f compose-django.yml up --build`
+- Flask : `pip install flask`
+- Docker : `docker compose -f compose-django.yml up --build`
 
 To install Docker, visit [Docker full documentation](https://docs.docker.com/engine/install/ubuntu/).
 
