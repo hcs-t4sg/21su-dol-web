@@ -1,5 +1,5 @@
 from flask import Flask,render_template,url_for,request
-import ableist_language_detector.detector as detector
+import ableist_language_module.ableist_language_detector.detector as detector
 from highlight import highlight, AbleistLanguage
 
 app = Flask(__name__)
