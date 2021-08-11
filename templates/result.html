@@ -28,7 +28,7 @@
 	<div class="usa-section">
 			<div class="grid-container">
 				<div class="grid-row grid-gap">
-					<div class ="grid-col-6">
+					<div class ="tablet:grid-col-8">
 						<h1>We found <b style='color:#005EA2 !important;'>{{length}}</b> instances of ableist language in this job description. </h1>
 						{% if show_results %}
 						<p>
@@ -40,7 +40,7 @@
 				</div>
 
 				<div class="grid-row grid-gap">
-					<main class="grid-col-6" id="main-content">
+					<main class="tablet:grid-col-8" id="main-content">
 						<div class="usa-prose">
 							<div class ="result-box">
 								<span>{{result | safe}}</span>
@@ -48,7 +48,7 @@
 						</div>
 					</main>
 
-					<div class = "grid-col-4">
+					<div class = "tablet:grid-col-4">
 						{% for term, replacements in alternatives.items() %} 
 						<div id="{{term_id.get(term)}}" data-term='{{ term }}' data-alternatives='{{ replacements|tojson }}' data-example="{{examples.get(term)}}"></div>
 						{% endfor %}
