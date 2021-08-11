@@ -27,7 +27,7 @@
 	<div class="usa-section">
 		<div class="grid-container">
 			<div class="grid-row grid-gap">
-				<div class="grid-col-6">
+				<div class="tablet:grid-col-8">
 					<h1>Get Started</h1>
 			
 					<p>
@@ -39,7 +39,7 @@
 			</div>
 
 			<div class="grid-row grid-gap">
-				<main class="grid-col-6" id="main-content">
+				<main class="tablet:grid-col-8" id="main-content">
 					<div class="usa-prose">
 							<form class="form" action="{{ url_for('predict')}}" method="POST">
 								<fieldset class="usa-fieldset">
@@ -50,7 +50,7 @@
 									required
 									aria-required="true"
 									placeholder="Enter Job Description"
-									style="max-width: 100%; min-height: 15rem; resize: none;"
+									style="max-width: 100%; min-height: 20rem; resize: none;"
 									
 								></textarea>
 
@@ -59,9 +59,8 @@
 					</div>
 				</main>
 				
-				<div class = "grid-col-4 ">
-					<div class="usa-summary-box" role="region" aria-labelledby="summary-box-key-information"
->
+				<div class = "tablet:grid-col-4">
+					<div class="usa-summary-box" role="region" aria-labelledby="summary-box-key-information">
 					<div class="usa-summary-box__body">
 						<h3 class="usa-summary-box__heading" id="summary-box-key-information">
 							How To Use This Tool
@@ -79,10 +78,11 @@
 					</p>
 					-->
 				</div>
+
 			</div>
 
 			<div class="grid-row">
-				<div class="grid-col-6">
+				<div class="tablet:grid-col-8">
 					<br />
 
 					<input type="submit" class="usa-button" style="float: left" value="Check Job Description">
