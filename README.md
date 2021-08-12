@@ -1,6 +1,6 @@
 ## Project Description
 
-The Office of Disability Employment Policy of the Department of Labor (DOL) is building out an [NLP algorithm](https://github.com/inclusive-ai/ableist-language-detector) that analyzes job posts to understand how accessible they are to people with disabilities—checking whether text skews towards abilities instead of skills. This in an accessibility toolkit or checklist for employers to create awareness and actionable insights to ensure companies are being inclusive to people with disabilities. This project is be part of the Combating AI Bias Toolkit. 
+The Office of Disability Employment Policy of the Department of Labor (DOL) is building out an [NLP algorithm](https://github.com/USDepartmentofLabor/ableist-language-detector) that analyzes job posts to understand how accessible they are to people with disabilities—checking whether text skews towards abilities instead of skills. This in an accessibility toolkit or checklist for employers to create awareness and actionable insights to ensure companies are being inclusive to people with disabilities. This project is be part of the Combating AI Bias Toolkit. 
 
 [Harvard T4SG](https://socialgood.hcs.harvard.edu/) is tasked to develop a website wrapper so that users can copy/paste text into the browser which would then call the model that the DOL is building and would pass back the results that the model finds. The contributors for this projects are:
 - Jamie Lu [Github](https://github.com/lujamie)
@@ -25,7 +25,7 @@ To install Docker, visit [Docker full documentation](https://docs.docker.com/eng
 
 Ableist language in job descriptions can cause people with disabilities to feel excluded from jobs that they are qualified for. This typically occurs when a description references [*abilities*](https://www.onetonline.org/find/descriptor/browse/Abilities/) or enduring attributes of an individual that are unnecessary for the job or for which [accommodations](https://askjan.org/) can be proactively offered instead of focusing on developed [*skills*](https://www.onetonline.org/skills/) that can be acquired to succeed in the role. By identifying ableist language and suggesting alternatives, this tool will support more inclusive hiring practices.
 
-Source: [DOL Ableist Language Detector Github](https://github.com/inclusive-ai/ableist-language-detector)
+Source: [DOL Ableist Language Detector Github](https://github.com/USDepartmentofLabor/ableist-language-detector)
 
 ## About Harvard Tech 4 Social Good (Harvard T4SG)
 
