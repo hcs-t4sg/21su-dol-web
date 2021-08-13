@@ -11,7 +11,9 @@ The Office of Disability Employment Policy of the Department of Labor (DOL) is b
 
 To install, Python Flask module and Docker is required. To install, run the following in your terminal: 
 - `git clone https://github.com/lujamie/dol-web.git`
+
 Create virtual environemnt: 
+
 - `python3 -m venv [name of virtual environment]`
 - `. [virtualenv]/bin/activate`
 - `pip install -r requirements.txt`
@@ -19,10 +21,12 @@ Create virtual environemnt:
 - `git clone https://github.com/USDepartmentofLabor/ableist-language-detector.git`
 - `cd ableist-language-detector`
 - `pip install -e .`
+
 The detector module should be installed now! To check you can change back to the `dol-web` directory and run the following in a python prompt:
-[1] `import ableist_language_detector`
-[2] `ableist_language_detector.__version__`
-[Output] `'0.1.0'`
+
+- [1] `import ableist_language_detector`
+- [2] `ableist_language_detector.__version__`
+- [Output] `'0.1.0'`
 
 Running on Docker instead of `virtualenv`:
 - Directory: `dol-web`
