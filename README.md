@@ -20,9 +20,9 @@ Create virtual environemnt:
 - `cd ableist-language-detector`
 - `pip install -e .`
 The detector module should be installed now! To check you can change back to the `dol-web` directory and run the following in a python prompt:
->>> `import ableist_language_detector`
->>> `ableist_language_detector.__version__`
-Output: `'0.1.0'`
+[1] `import ableist_language_detector`
+[2] `ableist_language_detector.__version__`
+[Output] `'0.1.0'`
 
 Running on Docker instead of `virtualenv`:
 - Directory: `dol-web`
