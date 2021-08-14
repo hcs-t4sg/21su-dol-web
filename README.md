@@ -4,7 +4,7 @@
 - [Installation & Setup](#Installation-and-Setup)
 - [About Office of Disability Employment Policy (ODEP)](#About-ODEP)
 - [About Ableist Language](#About-Ableist-Language)
-- [About Harvard T4SG](#About-Harvard-Tech-4-Social-Good-(Harvard T4SG))
+- [About Harvard T4SG](#About-Harvard-Tech-For-Social-Good)
 - [Questions?](#Questions?)
 
 
@@ -62,7 +62,7 @@ Ableist language in job descriptions can cause people with disabilities to feel 
 
 Source: [DOL Ableist Language Detector Github](https://github.com/USDepartmentofLabor/ableist-language-detector)
 
-## About Harvard Tech 4 Social Good (Harvard T4SG)
+## About Harvard Tech For Social Good
 
 We're Harvard students passionate about leveraging computer science to make a difference, and we work with social impact organizations to understand their needs and develop products that effectively tackle their challenges. We understand that technology and social good are often misaligned, and we focus on need finding and human-centered design to ensure our projects are impactful.
 
