@@ -1,10 +1,10 @@
 ## Content
 
 - [Project Overview](#Project-Overview)
-- [Installation & Setup](#Installation-&-Setup)
+- [Installation & Setup](#Installation-Setup)
 - [About Office of Disability Employment Policy (ODEP)](#About-ODEP)
 - [About Ableist Language](#About-Ableist-Language)
-- [About Harvard T4SG](#About-Harvard-Tech-4-Social-Good)
+- [About Harvard T4SG](#About-Harvard)
 - [Questions?](#Questions?)
 
 
