@@ -1,4 +1,14 @@
-## Project Description
+## Content
+
+- [Project Overview](#Project-Overview)
+- [Installation & Setup](#Installation-&-Setup)
+- [About Office of Disability Employment Policy (ODEP)](#About-ODEP)
+- [About Ableist Language](#About-Ableist-Language)
+- [About Harvard T4SG](#About-Harvard-Tech-4-Social-Good)
+- [Questions?](#Questions?)
+
+
+## Project Overview
 
 The Office of Disability Employment Policy of the Department of Labor (DOL) is building out an [NLP algorithm](https://github.com/USDepartmentofLabor/ableist-language-detector) that analyzes job posts to understand how accessible they are to people with disabilities—checking whether text skews towards abilities instead of skills. This in an accessibility toolkit or checklist for employers to create awareness and actionable insights to ensure companies are being inclusive to people with disabilities. This project is be part of the Combating AI Bias Toolkit. 
 
@@ -34,6 +44,12 @@ Running on Docker instead of `virtualenv`:
 
 To install Docker, visit [Docker full documentation](https://docs.docker.com/engine/install/ubuntu/).
 
+## About ODEP
+
+The Office of Disability Employment Policy (ODEP) is the only non-regulatory federal agency that promotes policies and coordinates with employers and all levels of government to increase workplace success for people with disabilities.
+
+For more infomation about ODEP, visit [ODEP website](https://www.dol.gov/agencies/odep).
+
 ## About Ableist Language
 
 **What is ableist language?**
@@ -55,6 +71,6 @@ We're Harvard students passionate about leveraging computer science to make a di
 For more information on how to collaborate and partner with us, please visit our [website](https://socialgood.hcs.harvard.edu/) or [email us](team@sg.hcs.harvard.edu.)
 
 
-## Questions ?
+## Questions?
 If you have any question trying to run the program, please do not hesitate to contact Harvard T4SG at: [team@sg.hcs.harvard.edu.] Thank you.
 
