@@ -1,10 +1,10 @@
 ## Content
 
 - [Project Overview](#Project-Overview)
-- [Installation & Setup](#Installation-Setup)
+- [Installation & Setup](#Installation-and-Setup)
 - [About Office of Disability Employment Policy (ODEP)](#About-ODEP)
 - [About Ableist Language](#About-Ableist-Language)
-- [About Harvard T4SG](#About-Harvard)
+- [About Harvard T4SG](#About-Harvard-Tech-4-Social-Good-(Harvard T4SG))
 - [Questions?](#Questions?)
 
 
@@ -17,7 +17,7 @@ The Office of Disability Employment Policy of the Department of Labor (DOL) is b
 - Zad Chin [Github](https://github.com/Iwanttobeatuna)
 - Kevin Tan [Github](https://github.com/kevintan250)
 
-##  Installation & Setup
+##  Installation and Setup
 
 To install, Python Flask module and Docker is required. To install, run the following in your terminal: 
 - `git clone https://github.com/lujamie/dol-web.git`
