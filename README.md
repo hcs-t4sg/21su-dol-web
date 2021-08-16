@@ -12,7 +12,7 @@
 
 The Office of Disability Employment Policy of the Department of Labor (DOL) is building out an [NLP algorithm](https://github.com/USDepartmentofLabor/ableist-language-detector) that analyzes job posts to understand how accessible they are to people with disabilities—checking whether text skews towards abilities instead of skills. This in an accessibility toolkit or checklist for employers to create awareness and actionable insights to ensure companies are being inclusive to people with disabilities. This project is be part of the Combating AI Bias Toolkit. 
 
-[Harvard T4SG](https://socialgood.hcs.harvard.edu/) is tasked to develop a website wrapper so that users can copy/paste text into the browser which would then call the model that the DOL is building and would pass back the results that the model finds. The contributors for this projects are:
+[Harvard Computer Society (HCS) Tech for Social Good](https://socialgood.hcs.harvard.edu/) is tasked to develop a website wrapper so that users can copy/paste text into the browser which would then call the model that the DOL is building and would pass back the results that the model finds. The contributors for this projects are:
 - Jamie Lu [Github](https://github.com/lujamie)
 - Zad Chin [Github](https://github.com/Iwanttobeatuna)
 - Kevin Tan [Github](https://github.com/kevintan250)
@@ -62,11 +62,11 @@ Ableist language in job descriptions can cause people with disabilities to feel 
 
 Source: [DOL Ableist Language Detector Github](https://github.com/USDepartmentofLabor/ableist-language-detector)
 
-## About Harvard Tech For Social Good
+## About HCS Tech For Social Good
 
-We're Harvard students passionate about leveraging computer science to make a difference, and we work with social impact organizations to understand their needs and develop products that effectively tackle their challenges. We understand that technology and social good are often misaligned, and we focus on need finding and human-centered design to ensure our projects are impactful.
+HCS Tech for Social Good is a student group dedicated to empowering student leaders to leverage technology to tackle the world’s big problems. As the hub of social impact tech at Harvard, T4SG’s flagship program provides technical consulting services to nonprofits, government agencies, and social enterprises in order to amplify the work of social impact organizations and provide a space for students to get involved with and inspired by mission-driven tech work. T4SG also engages the community in social impact tech through programs, workshops, events, courses, and more.
 
-**Work With Harvard T4SG**
+**Work With HCS Tech for Social Good**
 
 For more information on how to collaborate and partner with us, please visit our [website](https://socialgood.hcs.harvard.edu/) or [email us](team@sg.hcs.harvard.edu.)
 
