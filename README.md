@@ -1,7 +1,8 @@
 ## Content
 
 - [Project Overview](#Project-Overview)
-- [Installation & Setup](#Installation-and-Setup)
+- [Installation](#Installation)
+- [Usage](#Usage)
 - [About Office of Disability Employment Policy (ODEP)](#About-ODEP)
 - [About Ableist Language](#About-Ableist-Language)
 - [About Harvard T4SG](#About-Harvard-Tech-For-Social-Good)
@@ -10,39 +11,82 @@
 
 ## Project Overview
 
-The Office of Disability Employment Policy of the Department of Labor (DOL) is building out an [NLP algorithm](https://github.com/USDepartmentofLabor/ableist-language-detector) that analyzes job posts to understand how accessible they are to people with disabilities—checking whether text skews towards abilities instead of skills. This in an accessibility toolkit or checklist for employers to create awareness and actionable insights to ensure companies are being inclusive to people with disabilities. This project is be part of the Combating AI Bias Toolkit. 
+The Department of Labor Office of Disability Employment Policy (DOL ODEP) and xD Census is building out an [NLP-powered tool](https://github.com/USDepartmentofLabor/ableist-language-detector) to identify ableist language (i.e. language that is offensive to people with disabilities) in job descriptions. This tool will assist employers in creating awareness and actionable insights to ensure companies are being inclusive to people with disabilities.
 
-[Harvard Computer Society (HCS) Tech for Social Good](https://socialgood.hcs.harvard.edu/) is tasked to develop a website wrapper so that users can copy/paste text into the browser which would then call the model that the DOL is building and would pass back the results that the model finds. The contributors for this projects are:
+[Harvard Computer Society (HCS) Tech for Social Good](https://socialgood.hcs.harvard.edu/) is tasked to develop a front-end web application interface to allow users to access the tool and check job descriptions for ableist language. The contributors for this projects are:
 - Jamie Lu [Github](https://github.com/lujamie)
 - Zad Chin [Github](https://github.com/Iwanttobeatuna)
 - Kevin Tan [Github](https://github.com/kevintan250)
 
-##  Installation and Setup
+This repo contains the code to run a local instance of the web application. For the main python library functionality, see the [USDepartmentofLabor/ableist-language-detector](https://github.com/USDepartmentofLabor/ableist-language-detector) repo.
 
-To install, Python Flask module and Docker is required. To install, run the following in your terminal: 
-- `git clone https://github.com/lujamie/dol-web.git`
+##  Installation
 
-Create virtual environemnt: 
+### Option 1. Install via Docker
 
-- `python3 -m venv [name of virtual environment]`
-- `. [virtualenv]/bin/activate`
-- `pip install -r requirements.txt`
-- `python -m space download en_core_web_sm`
-- `git clone https://github.com/USDepartmentofLabor/ableist-language-detector.git`
-- `cd ableist-language-detector`
-- `pip install -e .`
+Install Docker on your machine by following the instructions in the [Docker documentation](https://docs.docker.com/get-started/).
 
-The detector module should be installed now! To check you can change back to the `dol-web` directory and run the following in a python prompt:
+Once you've installed Docker, build the container using the included `compose-django.yml` file:
 
-- [1] `import ableist_language_detector`
-- [2] `ableist_language_detector.__version__`
-- [Output] `'0.1.0'`
+```
+docker compose -f compose-django.yml up --build
+```
 
-Running on Docker instead of `virtualenv`:
-- Directory: `dol-web`
-- Docker: `docker compose -f compose-django.yml up --build`
+The application is now running and you can move on to the [Usage](#Usage) step.
 
-To install Docker, visit [Docker full documentation](https://docs.docker.com/engine/install/ubuntu/).
+### Option 2. Install without Docker
+
+This tool requires Python >= 3.8.
+
+Create a virtual environment (`venv` instructions are given below, but you can use any virtual environment of your choosing):
+
+```
+python3 -m venv [name of virtual environment]
+. [virtualenv]/bin/activate
+```
+
+Clone this repository:
+
+```
+git clone https://github.com/lujamie/dol-web.git
+```
+
+Install the required packages:
+
+```
+cd dol-web
+python -m pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+```
+
+The detector module should be installed now! To check the installation, run the following in a python prompt:
+
+```
+>>> import ableist_language_detector
+>>> ableist_language_detector.__version__
+'0.1.0'
+```
+
+Next, start a local instance of the ableist language detector web application:
+
+```
+export FLASK_APP=app
+flask run
+```
+
+## Usage
+
+After completing either the Docker or non-Docker installation commands, you'll see an output that ends in a LocalHost URL like this (the actual IP address shown will vary depending on if you are using Docker or not):
+
+```
+* Running on http://XXX.XX.X.X:5000/ (Press CTRL+C to quit)
+```
+
+Navigate to `http://localhost:5000/` in your browser and you should see the web application:
+
+![img](assets/ableist-ui.png)
+
+
 
 ## About ODEP
 
