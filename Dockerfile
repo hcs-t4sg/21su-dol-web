@@ -5,10 +5,6 @@ WORKDIR /ui
 ADD . /ui
 RUN pip install -r requirements.txt
 RUN python -m spacy download en_core_web_sm
-WORKDIR /detector
-RUN git clone https://github.com/USDepartmentofLabor/ableist-language-detector.git
-WORKDIR /detector/ableist-language-detector
-RUN pip install -e .
 #ENV MLFLOW_TRACKING_URI=http://localhost:5000
 WORKDIR /ui
 

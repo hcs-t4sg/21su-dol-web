@@ -1,20 +1,12 @@
-from dataclasses import dataclass
 from typing import List, Tuple
 import spacy
 
 nlp = spacy.load("en_core_web_sm")
 
 
-# mocking a simpler version of detector output
-@dataclass
-class AbleistLanguage:
-    text: str
-    start: int
-    end: int
-
-
 def highlight(text: str, terms_list: List[Tuple[int, int]]) -> str:
-    """Return a string with highlighted phrases enclosed in <em> </em> tags.
+    """Return a string with highlighted phrases enclosed in tags.
+
     Parameters
     ----------
     text : str
@@ -23,6 +15,7 @@ def highlight(text: str, terms_list: List[Tuple[int, int]]) -> str:
         list of phrases to highlight, where each element represents a phrase's spacy
         start and end token positions in the document; list must be sorted in ascending
         order of start index
+
     Returns
     -------
     str
@@ -40,9 +33,7 @@ def highlight(text: str, terms_list: List[Tuple[int, int]]) -> str:
             # i.e. if the original text has \n, should use that instead of space
             result += f"{doc[previous_end:term_start].text} "
         # get all highlighted terms
-        
-        # result += f"<em>{doc[term_start:term_end].text}</em>"
-        result += f"<mark style=\"background: #FFBE2E!important; cursor: pointer; \" onclick=\"myFunction('{word_id}')\">{word}</mark>"
+        result += f'<mark style="background: #FFBE2E!important; cursor: pointer; " onclick="myFunction(\'{word_id}\')">{word}</mark>'
         # if the current highlighted term is in the middle of the doc, right pad with a space
         if term_end < len(doc):
             result += " "
